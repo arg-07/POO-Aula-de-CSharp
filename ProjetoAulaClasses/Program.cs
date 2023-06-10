@@ -37,12 +37,12 @@ namespace Course
 
             if (areax > areay)
             {
-                Console.WriteLine("O triângulo x é maior do que o triângulo y");
+                Console.WriteLine("O triângulo x é maior do que o triângulo y!");
 
             }
             else
             {
-                Console.WriteLine("O triângulo y é maior do que o triângulo x");
+                Console.WriteLine("O triângulo y é maior do que o triângulo x!");
             }
 
             Console.ReadLine();
