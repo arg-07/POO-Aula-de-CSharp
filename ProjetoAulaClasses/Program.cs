@@ -25,11 +25,9 @@ namespace Course
             y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            double p1 = (x.A + x.B + x.C) / 2.0;
-            double areax = Math.Sqrt(p1 * (p1 - x.A) * (p1 - x.B) * (p1 - x.C));
+            double areax = x.Area();
 
-            double p2 = (y.A + y.B + y.C) / 2.0;
-            double areay = Math.Sqrt(p2 * (p2 - y.A) * (p2 - y.B) * (p2 - y.C));
+            double areay = y.Area();
 
             Console.WriteLine("Area de x = " + areax.ToString("F2", CultureInfo.InvariantCulture));
 
