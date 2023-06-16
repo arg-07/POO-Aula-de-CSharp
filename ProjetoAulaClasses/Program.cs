@@ -9,41 +9,28 @@ namespace Course
     {
         static void Main(string[] args)
         {
+
+            Funcionario f = new Funcionario();
+
+            Console.WriteLine("Entre com o nome do funcionário:");
+            f.Nome = Console.ReadLine();
             
-            Retangulo r = new Retangulo();
 
-            Console.WriteLine("Entre com a largura do retangulo");
-            r.Largura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("Entre com o salário bruto:");
+            f.SalarioBruto = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Console.WriteLine("Entre com a altura do retangulo");
-            r.Altura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("Digite o valor do imposto sindical:");
+            f.Imposto = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            double areax = r.Area();
-            double aperimetro = r.Perimetro();
-            double adiagonal = r.Diagonal();
+            Console.WriteLine("Digite a porcentagem para a base do aumento de salário:");
+            double qte = double.Parse(Console.ReadLine());
+            f.AumentarSalario(qte);
 
-            Console.WriteLine(r);
 
-            //Console.WriteLine("Area = " + areax.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine(f);
 
             Console.ReadLine();
 
-
-
-            //Console.WriteLine("Dados do produto: " + p);
-
-            //Console.WriteLine();
-            //Console.WriteLine("Digite o número de produtos a ser adicionado ao estoque: ");
-            //int qte = int.Parse(Console.ReadLine());
-            //p.AdicionarProdutos(qte);
-            //Console.WriteLine("Dados atualizados: " + p);
-
-
-            //Console.WriteLine();
-            //Console.WriteLine("Digite o número de produtos a ser removido do estoque: ");
-            //qte = int.Parse(Console.ReadLine());
-            //p.RemoverProdutos(qte);
-            //Console.WriteLine("Dados atualizados: " + p);
 
 
 
@@ -52,6 +39,48 @@ namespace Course
     }
 
 }
+
+
+
+
+
+
+//using ProjetoAulaClasses;
+//using System;
+//using System.Globalization;
+//using System.Security.Cryptography.X509Certificates;
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+
+//            Retangulo r = new Retangulo();
+
+//            Console.WriteLine("Entre com a largura do retangulo");
+//            r.Largura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+//            Console.WriteLine("Entre com a altura do retangulo");
+//            r.Altura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+//            double areax = r.Area();
+//            double aperimetro = r.Perimetro();
+//            double adiagonal = r.Diagonal();
+
+//            Console.WriteLine(r);
+
+//            Console.ReadLine();
+
+
+
+
+//        }
+
+//    }
+
+//}
 
 
 
