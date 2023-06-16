@@ -1,5 +1,4 @@
-﻿
-using ProjetoAulaClasses;
+﻿using ProjetoAulaClasses;
 using System;
 using System.Globalization;
 using System.Security.Cryptography.X509Certificates;
@@ -10,38 +9,117 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Produto p = new Produto();
+            
+            Retangulo r = new Retangulo();
 
-            Console.WriteLine("Entre com os dados do produto");
-            Console.Write("Nome: ");
-            p.Nome = Console.ReadLine();
-            Console.WriteLine("Preço: ");
-            p.Preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.Write("Quantidade no Estoque: ");
-            p.Quantidade = int.Parse(Console.ReadLine());
+            Console.WriteLine("Entre com a largura do retangulo");
+            r.Largura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Console.WriteLine("Dados do produto: " + p);
+            Console.WriteLine("Entre com a altura do retangulo");
+            r.Altura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Console.WriteLine();
-            Console.WriteLine("Digite o número de produtos a ser adicionado ao estoque: ");
-            int qte = int.Parse(Console.ReadLine());
-            p.AdicionarProdutos(qte);
-            Console.WriteLine("Dados atualizados: " + p);
+            double areax = r.Area();
+            double aperimetro = r.Perimetro();
+            double adiagonal = r.Diagonal();
 
+            Console.WriteLine(r);
 
-            Console.WriteLine();
-            Console.WriteLine("Digite o número de produtos a ser removido do estoque: ");
-            qte = int.Parse(Console.ReadLine());
-            p.RemoverProdutos(qte);
-            Console.WriteLine("Dados atualizados: " + p);
+            //Console.WriteLine("Area = " + areax.ToString("F2", CultureInfo.InvariantCulture));
 
             Console.ReadLine();
+
+
+
+            //Console.WriteLine("Dados do produto: " + p);
+
+            //Console.WriteLine();
+            //Console.WriteLine("Digite o número de produtos a ser adicionado ao estoque: ");
+            //int qte = int.Parse(Console.ReadLine());
+            //p.AdicionarProdutos(qte);
+            //Console.WriteLine("Dados atualizados: " + p);
+
+
+            //Console.WriteLine();
+            //Console.WriteLine("Digite o número de produtos a ser removido do estoque: ");
+            //qte = int.Parse(Console.ReadLine());
+            //p.RemoverProdutos(qte);
+            //Console.WriteLine("Dados atualizados: " + p);
+
+
 
         }
 
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//using ProjetoAulaClasses;
+//using System;
+//using System.Globalization;
+//using System.Security.Cryptography.X509Certificates;
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            Produto p = new Produto();
+
+//            Console.WriteLine("Entre com os dados do produto");
+//            Console.Write("Nome: ");
+//            p.Nome = Console.ReadLine();
+//            Console.WriteLine("Preço: ");
+//            p.Preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+//            Console.Write("Quantidade no Estoque: ");
+//            p.Quantidade = int.Parse(Console.ReadLine());
+
+//            Console.WriteLine("Dados do produto: " + p);
+
+//            Console.WriteLine();
+//            Console.WriteLine("Digite o número de produtos a ser adicionado ao estoque: ");
+//            int qte = int.Parse(Console.ReadLine());
+//            p.AdicionarProdutos(qte);
+//            Console.WriteLine("Dados atualizados: " + p);
+
+
+//            Console.WriteLine();
+//            Console.WriteLine("Digite o número de produtos a ser removido do estoque: ");
+//            qte = int.Parse(Console.ReadLine());
+//            p.RemoverProdutos(qte);
+//            Console.WriteLine("Dados atualizados: " + p);
+
+//            Console.ReadLine();
+
+//        }
+
+//    }
+
+//}
 
 
 
