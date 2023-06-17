@@ -1,4 +1,5 @@
-﻿using ProjetoAulaClasses;
+﻿
+using ProjetoAulaClasses;
 using System;
 using System.Globalization;
 using System.Security.Cryptography.X509Certificates;
@@ -10,24 +11,22 @@ namespace Course
         static void Main(string[] args)
         {
 
-            Funcionario f = new Funcionario();
+            Escola L = new Escola();
 
-            Console.WriteLine("Entre com o nome do funcionário:");
-            f.Nome = Console.ReadLine();
-            
+            Console.WriteLine("Digite o nome do aluno:");
+            L.Nome = Console.ReadLine();
 
-            Console.WriteLine("Entre com o salário bruto:");
-            f.SalarioBruto = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("Digite a primeira Nota:");
+            L.Nota1 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Console.WriteLine("Digite o valor do imposto sindical:");
-            f.Imposto = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("Digite a segunda Nota:");
+            L.Nota2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Console.WriteLine("Digite a porcentagem para a base do aumento de salário:");
-            double qte = double.Parse(Console.ReadLine());
-            f.AumentarSalario(qte);
+            Console.WriteLine("Digite a terceira Nota:");
+            L.Nota3 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture); 
 
 
-            Console.WriteLine(f);
+            Console.WriteLine(L);
 
             Console.ReadLine();
 
@@ -39,6 +38,56 @@ namespace Course
     }
 
 }
+
+
+
+
+
+
+
+
+
+//using ProjetoAulaClasses;
+//using System;
+//using System.Globalization;
+//using System.Security.Cryptography.X509Certificates;
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+
+//            Funcionario f = new Funcionario();
+
+//            Console.WriteLine("Entre com o nome do funcionário:");
+//            f.Nome = Console.ReadLine();
+
+
+//            Console.WriteLine("Entre com o salário bruto:");
+//            f.SalarioBruto = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+//            Console.WriteLine("Digite o valor do imposto sindical:");
+//            f.Imposto = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+//            Console.WriteLine("Digite a porcentagem para a base do aumento de salário:");
+//            double qte = double.Parse(Console.ReadLine());
+//            f.AumentarSalario(qte);
+
+
+//            Console.WriteLine(f);
+
+//            Console.ReadLine();
+
+
+
+
+//        }
+
+//    }
+
+//}
 
 
 
