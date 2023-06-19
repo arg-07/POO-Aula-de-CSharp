@@ -2,42 +2,100 @@
 using ProjetoAulaClasses;
 using System;
 using System.Globalization;
-using System.Security.Cryptography.X509Certificates;
+
 
 namespace Course
 {
     class Program
     {
+        static double pi = 3.14;
         static void Main(string[] args)
         {
 
-            Escola L = new Escola();
+            Console.WriteLine("Entre com o valor do raio: ");
+            double raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Console.WriteLine("Digite o nome do aluno:");
-            L.Nome = Console.ReadLine();
+            double circ = circunferencia(raio);
 
-            Console.WriteLine("Digite a primeira Nota:");
-            L.Nota1 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("Circunferencia: " + circ.ToString("F2", CultureInfo.InvariantCulture));
 
-            Console.WriteLine("Digite a segunda Nota:");
-            L.Nota2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-            Console.WriteLine("Digite a terceira Nota:");
-            L.Nota3 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture); 
-
-
-            Console.WriteLine(L);
+            double volume = Volume(raio);
+            Console.WriteLine("Volume: " + volume.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Valor de PI: " + pi.ToString("F2", CultureInfo.InvariantCulture));
 
             Console.ReadLine();
 
+        }
 
+        static double circunferencia(double r) 
+        {
 
+            return 2.0 * pi * r; 
+        
+        } 
 
+        static double Volume(double r) 
+        {
+
+            return 4.0 / 3.0 * pi * Math.Pow(r, 3);
+        
         }
 
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//using ProjetoAulaClasses;
+//using System;
+//using System.Globalization;
+//using System.Security.Cryptography.X509Certificates;
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+
+//            Escola L = new Escola();
+
+//            Console.WriteLine("Digite o nome do aluno:");
+//            L.Nome = Console.ReadLine();
+
+//            Console.WriteLine("Digite a primeira Nota:");
+//            L.Nota1 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+//            Console.WriteLine("Digite a segunda Nota:");
+//            L.Nota2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+//            Console.WriteLine("Digite a terceira Nota:");
+//            L.Nota3 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture); 
+
+
+//            Console.WriteLine(L);
+
+//            Console.ReadLine();
+
+
+
+
+//        }
+
+//    }
+
+//}
 
 
 
