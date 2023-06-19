@@ -27,23 +27,85 @@ namespace Course
 
         }
 
-        static double circunferencia(double r) 
+        static double circunferencia(double r)
         {
 
-            return 2.0 * pi * r; 
-        
-        } 
+            return 2.0 * pi * r;
 
-        static double Volume(double r) 
+        }
+
+        static double Volume(double r)
         {
 
             return 4.0 / 3.0 * pi * Math.Pow(r, 3);
-        
+
         }
 
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//using ProjetoAulaClasses;
+//using System;
+//using System.Globalization;
+
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static double pi = 3.14;
+//        static void Main(string[] args)
+//        {
+
+//            Console.WriteLine("Entre com o valor do raio: ");
+//            double raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+//            double circ = circunferencia(raio);
+
+//            Console.WriteLine("Circunferencia: " + circ.ToString("F2", CultureInfo.InvariantCulture));
+
+//            double volume = Volume(raio);
+//            Console.WriteLine("Volume: " + volume.ToString("F2", CultureInfo.InvariantCulture));
+//            Console.WriteLine("Valor de PI: " + pi.ToString("F2", CultureInfo.InvariantCulture));
+
+//            Console.ReadLine();
+
+//        }
+
+//        static double circunferencia(double r) 
+//        {
+
+//            return 2.0 * pi * r; 
+
+//        } 
+
+//        static double Volume(double r) 
+//        {
+
+//            return 4.0 / 3.0 * pi * Math.Pow(r, 3);
+
+//        }
+
+//    }
+
+//}
 
 
 
