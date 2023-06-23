@@ -1,4 +1,5 @@
 ﻿
+
 using ProjetoAulaClasses;
 using System;
 using System.Globalization;
@@ -11,29 +12,13 @@ namespace Course
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Entre com os dados do produto");
-            Console.Write("Nome: ");
-            string nome = Console.ReadLine();
-            Console.WriteLine("Preço: ");
-            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            
+            Produto p = new Produto("tv", 500.00, 10);
 
-            Produto p = new Produto(nome, preco);
-
-            Console.WriteLine("Dados do produto: " + p);
-
-            Console.WriteLine();
-            Console.WriteLine("Digite o número de produtos a ser adicionado ao estoque: ");
-            int qte = int.Parse(Console.ReadLine());
-            p.AdicionarProdutos(qte);
-            Console.WriteLine("Dados atualizados: " + p);
-
-
-            Console.WriteLine();
-            Console.WriteLine("Digite o número de produtos a ser removido do estoque: ");
-            qte = int.Parse(Console.ReadLine());
-            p.RemoverProdutos(qte);
-            Console.WriteLine("Dados atualizados: " + p);
+            p.SetNome("T");
+         
+            Console.WriteLine(p.GetNome());
+            Console.WriteLine(p.GetQuantidade());
+            Console.WriteLine(p.GetPreco());
 
             Console.ReadLine();
 
@@ -42,6 +27,69 @@ namespace Course
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//using ProjetoAulaClasses;
+//using System;
+//using System.Globalization;
+//using System.Security.Cryptography.X509Certificates;
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+
+//            Console.WriteLine("Entre com os dados do produto");
+//            Console.Write("Nome: ");
+//            string nome = Console.ReadLine();
+//            Console.WriteLine("Preço: ");
+//            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+
+//            Produto p = new Produto(nome, preco);
+
+//            Produto p3 = new Produto { Nome = "tv",Preco = 24.23 };
+
+//            Console.WriteLine("Dados do produto: " + p);
+
+//            Console.WriteLine();
+//            Console.WriteLine("Digite o número de produtos a ser adicionado ao estoque: ");
+//            int qte = int.Parse(Console.ReadLine());
+//            p.AdicionarProdutos(qte);
+//            Console.WriteLine("Dados atualizados: " + p);
+
+
+//            Console.WriteLine();
+//            Console.WriteLine("Digite o número de produtos a ser removido do estoque: ");
+//            qte = int.Parse(Console.ReadLine());
+//            p.RemoverProdutos(qte);
+//            Console.WriteLine("Dados atualizados: " + p);
+
+//            Console.ReadLine();
+
+//        }
+
+//    }
+
+//}
 
 
 
