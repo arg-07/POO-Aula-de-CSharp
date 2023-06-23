@@ -2,35 +2,102 @@
 using ProjetoAulaClasses;
 using System;
 using System.Globalization;
-
+using System.Security.Cryptography.X509Certificates;
 
 namespace Course
 {
     class Program
     {
-        
         static void Main(string[] args)
         {
 
+            Console.WriteLine("Entre com os dados do produto");
+            Console.Write("Nome: ");
+            string nome = Console.ReadLine();
+            Console.WriteLine("Preço: ");
+            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Quantidade no Estoque: ");
+            int quantidade = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Entre com o valor do raio: ");
-            double raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Produto p = new Produto(nome, preco, quantidade);
 
-            double circ = Calculadora.circunferencia(raio);
-            double volume = Calculadora.Volume(raio);
+            Console.WriteLine("Dados do produto: " + p);
 
-            Console.WriteLine("Circunferencia: " + circ.ToString("F2", CultureInfo.InvariantCulture));
-            Console.WriteLine("Volume: " + volume.ToString("F2", CultureInfo.InvariantCulture));
-            Console.WriteLine("Valor de PI: " + Calculadora.pi.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine();
+            Console.WriteLine("Digite o número de produtos a ser adicionado ao estoque: ");
+            int qte = int.Parse(Console.ReadLine());
+            p.AdicionarProdutos(qte);
+            Console.WriteLine("Dados atualizados: " + p);
+
+
+            Console.WriteLine();
+            Console.WriteLine("Digite o número de produtos a ser removido do estoque: ");
+            qte = int.Parse(Console.ReadLine());
+            p.RemoverProdutos(qte);
+            Console.WriteLine("Dados atualizados: " + p);
 
             Console.ReadLine();
 
         }
 
-
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//using ProjetoAulaClasses;
+//using System;
+//using System.Globalization;
+
+
+//namespace Course
+//{
+//    class Program
+//    {
+
+//        static void Main(string[] args)
+//        {
+
+
+//            Console.WriteLine("Entre com o valor do raio: ");
+//            double raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+//            double circ = Calculadora.circunferencia(raio);
+//            double volume = Calculadora.Volume(raio);
+
+//            Console.WriteLine("Circunferencia: " + circ.ToString("F2", CultureInfo.InvariantCulture));
+//            Console.WriteLine("Volume: " + volume.ToString("F2", CultureInfo.InvariantCulture));
+//            Console.WriteLine("Valor de PI: " + Calculadora.pi.ToString("F2", CultureInfo.InvariantCulture));
+
+//            Console.ReadLine();
+
+//        }
+
+
+//    }
+
+//}
 
 
 
