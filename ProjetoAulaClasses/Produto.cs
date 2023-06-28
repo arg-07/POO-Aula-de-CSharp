@@ -8,8 +8,10 @@ namespace ProjetoAulaClasses
     class Produto
     {
         private string? _nome;
-        private double _preco;
-        private int _quantidade;
+        //private double _preco;
+        public double Preco { get; private set; }
+        //private int _quantidade;
+        public int Quantidade { get; private set; }
 
         public Produto() { }
 
@@ -17,27 +19,27 @@ namespace ProjetoAulaClasses
         {
         
             _nome = nome;
-            _preco = preco;
-            _quantidade = quantidade;
+            Preco = preco;
+            Quantidade = quantidade;
         
         }
 
         public double ValorTotalEmEstoque() 
         { 
         
-            return _preco * _quantidade;
+            return Preco * Quantidade;
         
         }
 
-        public string Nome 
+        public string Nome
         {
-        
-            get 
-            { 
-                return _nome; 
+
+            get
+            {
+                return _nome;
             }
 
-            set 
+            set
             {
                 if (value != null && value.Length > 3)
                 {
@@ -47,9 +49,9 @@ namespace ProjetoAulaClasses
                 }
                 else { Console.WriteLine("esse valor não é aceito"); }
             }
-        
-        
-        
+
+
+
         }
 
 
@@ -77,32 +79,32 @@ namespace ProjetoAulaClasses
         
         }
 
-        public double Preco
+        //public double Preco
+        //{
+
+        //    get { return _preco; }
+
+    }
+
+    public double GetPreco()
+    {
+
+        return Preco;
+
+    }
+
+    //public int Quantidade 
+    //{
+
+    //    get { return _quantidade; }
+
+
+    //}
+
+    public int GetQuantidade() 
         {
         
-            get { return _preco; }
-        
-        }
-
-        public double GetPreco() 
-        {
-
-            return _preco;
-        
-        }
-
-        public int Quantidade 
-        {
-
-            get { return _quantidade; }
-        
-        
-        }
-
-        public int GetQuantidade() 
-        {
-        
-            return _quantidade;
+            return Quantidade;
         
         
         }
@@ -110,14 +112,14 @@ namespace ProjetoAulaClasses
         public void AdicionarProdutos(int quantidade) 
         {
 
-            _quantidade = _quantidade + quantidade; 
+            Quantidade = Quantidade + quantidade; 
         
         }
 
         public void RemoverProdutos(int quantidade)
         {
 
-            _quantidade = _quantidade - quantidade;
+            Quantidade = Quantidade - quantidade;
 
         }
 
@@ -125,9 +127,9 @@ namespace ProjetoAulaClasses
         {
             return _nome
                 + ", $ "
-                + _preco.ToString("F2", CultureInfo.InvariantCulture)
+                + Preco.ToString("F2", CultureInfo.InvariantCulture)
                 + ", "
-                + _quantidade
+                + Quantidade
                 + " unidades, Total: $ "
                 + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
         }
