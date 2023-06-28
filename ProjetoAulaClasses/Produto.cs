@@ -29,6 +29,31 @@ namespace ProjetoAulaClasses
         
         }
 
+        public string Nome 
+        {
+        
+            get 
+            { 
+                return _nome; 
+            }
+
+            set 
+            {
+                if (value != null && value.Length > 3)
+                {
+
+                    _nome = value;
+
+                }
+                else { Console.WriteLine("esse valor não é aceito"); }
+            }
+        
+        
+        
+        }
+
+
+
         public String? GetNome() 
         {
 
@@ -52,10 +77,25 @@ namespace ProjetoAulaClasses
         
         }
 
+        public double Preco
+        {
+        
+            get { return _preco; }
+        
+        }
+
         public double GetPreco() 
         {
 
             return _preco;
+        
+        }
+
+        public int Quantidade 
+        {
+
+            get { return _quantidade; }
+        
         
         }
 

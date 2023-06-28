@@ -14,11 +14,12 @@ namespace Course
 
             Produto p = new Produto("tv", 500.00, 10);
 
-            p.SetNome("T");
+            //p.SetNome("T");
+            p.Nome = "T";
          
-            Console.WriteLine(p.GetNome());
+            Console.WriteLine(p.Nome);
             Console.WriteLine(p.GetQuantidade());
-            Console.WriteLine(p.GetPreco());
+            Console.WriteLine(p.Preco);
 
             Console.ReadLine();
 
