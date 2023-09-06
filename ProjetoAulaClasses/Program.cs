@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using ProjetoAulaClasses;
+using System;
 using System.Globalization;
 
 namespace Course
@@ -8,45 +10,184 @@ namespace Course
         static void Main(string[] args)
         {
 
-            ContaBancaria conta;
+            //Produto p = new Produto();
 
-            Console.Write("Entre o número da conta: ");
-            int numero = int.Parse(Console.ReadLine());
-            Console.Write("Entre o titular da conta: ");
-            string titular = Console.ReadLine();
-            Console.Write("Haverá depósito inicial (s/n)? ");
-            char resp = char.Parse(Console.ReadLine());
-            if (resp == 's' || resp == 'S')
-            {
-                Console.Write("Entre o valor de depósito inicial: ");
-                double depositoInicial = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                conta = new ContaBancaria(numero, titular, depositoInicial);
-            }
-            else
-            {
-                conta = new ContaBancaria(numero, titular);
-            }
+            Produto p; //declaração da variavel
+            p = new Produto(); //instaciamento da variavel
 
-            Console.WriteLine();
-            Console.WriteLine("Dados da conta:");
-            Console.WriteLine(conta);
+
+            Console.WriteLine("Entre com o nome do produto:");
+            Console.Write("Nome: ");
+            p.Nome = Console.ReadLine();
+            Console.Write("Preco: ");
+            p.Preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Quantidade: ");
+            p.Quantidade = int.Parse(Console.ReadLine());
+
+            Console.WriteLine( );
+
+            Console.WriteLine("Dados do Produto" + p);
 
             Console.WriteLine();
-            Console.Write("Entre um valor para depósito: ");
-            double quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            conta.Deposito(quantia);
-            Console.WriteLine("Dados da conta atualizados:");
-            Console.WriteLine(conta);
+            Console.WriteLine("Digite o número de produtos a ser adicionados no estoque");
+            int qte = int.Parse(Console.ReadLine());
+            p.AdicionarProdutos(qte);
+            Console.WriteLine("Dados atualizados: " + p);
 
             Console.WriteLine();
-            Console.Write("Entre um valor para saque: ");
-            quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            conta.Saque(quantia);
-            Console.WriteLine("Dados da conta atualizados:");
-            Console.WriteLine(conta);
+            Console.WriteLine("Digite o número de produtos a ser removidos do estoque");
+            qte = int.Parse(Console.ReadLine());
+            p.RemoverProdutos(qte);
+            Console.WriteLine("Dados atualizados: " + p);
+
+
+
+
+            Console.ReadLine();
+
         }
+
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//using ProjetoAulaClasses;
+//using System;
+//using System.Globalization;
+
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+
+//            Triangulo1 x, y;
+
+//            x = new Triangulo1();
+//            y = new Triangulo1();
+
+//            Console.WriteLine("entre com as medidas do triãngulo X:");
+//             x.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+//             x.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+//             x.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+//            Console.WriteLine("entre com as medidas do triãngulo Y:");
+//            y.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+//            y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+//            y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+
+//            double areax = x.Area();
+
+
+//            double areay = y.Area();
+
+
+//            Console.WriteLine("Área de x = " + areax.ToString("F4", CultureInfo.InvariantCulture));
+//            Console.WriteLine("Área de y = " + areay.ToString("F4", CultureInfo.InvariantCulture));
+
+//            if (areax > areay)
+//            {
+
+//                Console.WriteLine("maior area: X");
+
+//            }
+//            else 
+//            {
+
+//                Console.WriteLine("Maior area: Y");
+
+//            }
+
+
+
+//            Console.ReadLine();
+
+//        }
+
+//    }
+
+//}
+
+
+
+
+
+//using System;
+//using System.Globalization;
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+
+//            ContaBancaria conta;
+
+//            Console.Write("Entre o número da conta: ");
+//            int numero = int.Parse(Console.ReadLine());
+//            Console.Write("Entre o titular da conta: ");
+//            string titular = Console.ReadLine();
+//            Console.Write("Haverá depósito inicial (s/n)? ");
+//            char resp = char.Parse(Console.ReadLine());
+//            if (resp == 's' || resp == 'S')
+//            {
+//                Console.Write("Entre o valor de depósito inicial: ");
+//                double depositoInicial = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+//                conta = new ContaBancaria(numero, titular, depositoInicial);
+//            }
+//            else
+//            {
+//                conta = new ContaBancaria(numero, titular);
+//            }
+
+//            Console.WriteLine();
+//            Console.WriteLine("Dados da conta:");
+//            Console.WriteLine(conta);
+
+//            Console.WriteLine();
+//            Console.Write("Entre um valor para depósito: ");
+//            double quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+//            conta.Deposito(quantia);
+//            Console.WriteLine("Dados da conta atualizados:");
+//            Console.WriteLine(conta);
+
+//            Console.WriteLine();
+//            Console.Write("Entre um valor para saque: ");
+//            quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+//            conta.Saque(quantia);
+//            Console.WriteLine("Dados da conta atualizados:");
+//            Console.WriteLine(conta);
+//        }
+//    }
+//}
 
 
 
